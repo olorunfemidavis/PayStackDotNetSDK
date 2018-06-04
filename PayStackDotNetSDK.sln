@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayStackDotNetSDK", "PayStackDotNetSDK\PayStackDotNetSDK.csproj", "{BA52829E-D8D3-47F6-B1F8-07582AE28A62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA52829E-D8D3-47F6-B1F8-07582AE28A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA52829E-D8D3-47F6-B1F8-07582AE28A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA52829E-D8D3-47F6-B1F8-07582AE28A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA52829E-D8D3-47F6-B1F8-07582AE28A62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {289BDF37-363B-481E-8DFD-9C76B35A8732}
+	EndGlobalSection
+EndGlobal
