@@ -2,6 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Olorunfemi Ajibulu</Authors>
+    <Description>The Paystack .Net API Collection is a collection of all endpoints that C# developers can take advantage of to build financial solutions in Nigeria</Description>
+    <Copyright>MIT License</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.2.0</Version>
+    <Company>Booksrite.com</Company>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/fzany/PayStackDotNetSDK/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/fzany/PayStackDotNetSDK</PackageProjectUrl>
+    <PackageIconUrl>https://paystack.com/assets/website/images/logo.svg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/fzany/PayStackDotNetSDK</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>paystack</PackageTags>
+    <PackageReleaseNotes>Complete API Integration.</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Models\Paystack.Net.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 
 </Project>
