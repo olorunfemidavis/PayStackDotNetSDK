@@ -1,5 +1,5 @@
 # PayStackDotNetSDK
-The Paystack .Net API Collection is a collection of all endpoints that C# developers can take advantage of to build financial solutions in Nigeria. 
+PayStackDotNetSDK API is a collection of all PayStack endpoints that C# developers can take advantage of to build financial solutions in Nigeria. 
 Visit [Paystack](https://paystack.com) for Setup.
 
 ### Prerequisites
@@ -8,7 +8,7 @@ This Library require .Net framework 4.6 or higher
 
 
 ### Installing
-Install this library from [Nuget](https://github.com/fzany/PayStackDotNetSDK)
+Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetSDK)
 
 
 
@@ -114,7 +114,10 @@ using PayStackDotNetSDK.Models.Transactions;
 
 #### Fetch Transaction
 
-   protected async void FetchTransaction()
+		/// <summary>
+        ///  Fetch Transaction
+        /// </summary>
+        protected async void FetchTransaction()
         {
             var connectionInstance = new Transaction(Credential.Key);
             var response = await connectionInstance.FetchTransaction(345);
@@ -309,7 +312,7 @@ add namespaces:
 using PayStackDotNetSDK.Methods.Banks;
 using PayStackDotNetSDK.Models.Banks;
 
-  /// <summary>
+		/// <summary>
         /// Get all Nigerian Banks on Paystack API
         /// </summary>
         protected async void GetAllBanks()

@@ -7,7 +7,7 @@
     <Copyright>MIT License</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <Company>Booksrite.com</Company>
     <PackageLicenseUrl>https://raw.githubusercontent.com/fzany/PayStackDotNetSDK/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/fzany/PayStackDotNetSDK</PackageProjectUrl>
@@ -15,7 +15,8 @@
     <RepositoryUrl>https://github.com/fzany/PayStackDotNetSDK</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>paystack</PackageTags>
-    <PackageReleaseNotes>Complete API Integration.</PackageReleaseNotes>
+    <PackageReleaseNotes>Complete API Integration.
+Examples Published on GitHub Page</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
