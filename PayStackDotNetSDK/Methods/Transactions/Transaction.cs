@@ -11,10 +11,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Transactions
 {
-    public class PaystackTransaction : ITransactions
+    public class Transaction : ITransactions
     {
         private string _secretKey;
-        public PaystackTransaction(string secretKey)
+        public Transaction(string secretKey)
         {
             this._secretKey = secretKey;
         }
@@ -123,12 +123,25 @@ namespace PayStackDotNetSDK.Methods.Transactions
             return JsonConvert.DeserializeObject<TransactionResponseModel>(getResult);
         }
 
-
-        public async Task<TransactionTotal> TransactionTotals()
+        /// <summary>
+        /// Total amount received on your account
+        /// </summary>
+        /// <returns></returns>
+        public async Task<TransactionTotalModel> TransactionTotals()
         {
             var url = GetUrl("totals");
             var getResult = await BaseClient.GetEntities(url, this._secretKey);
-            return JsonConvert.DeserializeObject<TransactionTotal>(getResult);
+            return JsonConvert.DeserializeObject<TransactionTotalModel>(getResult);
+        }
+        public async Task<TransactionTotalModel> TransactionTotals(TransactionTotalsRequestModel requestModel)
+        {
+            var url = GetUrl("totals");
+            var properties = from p in requestModel.GetType().GetProperties()
+                             where p.GetValue(requestModel, null) != null
+                             select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
+            string queryString = url + String.Join("&", properties.ToArray());
+            var getResult = await BaseClient.GetEntities(queryString, this._secretKey);
+            return JsonConvert.DeserializeObject<TransactionTotalModel>(getResult);
         }
 
         public async Task<ExportResponseModel> ExportTransactions()

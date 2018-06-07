@@ -11,7 +11,7 @@
     <Company>Booksrite.com</Company>
     <PackageLicenseUrl>https://raw.githubusercontent.com/fzany/PayStackDotNetSDK/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/fzany/PayStackDotNetSDK</PackageProjectUrl>
-    <PackageIconUrl>https://paystack.com/assets/website/images/logo.svg</PackageIconUrl>
+    <PackageIconUrl>https://res.cloudinary.com/booksrite/image/upload/v1528391286/favicon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/fzany/PayStackDotNetSDK</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>paystack</PackageTags>

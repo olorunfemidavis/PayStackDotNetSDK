@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace PayStackDotNetSDK.SDK.Subaccounts
+namespace PayStackDotNetSDK.Methods.Subaccounts
 {
     public class SubAccount : ISubAccounts
     {

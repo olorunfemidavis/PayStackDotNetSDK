@@ -4,12 +4,12 @@ using PayStackDotNetSDK.Helpers;
 using PayStackDotNetSDK.Interfaces;
 using PayStackDotNetSDK.Models.Banks;
 
-namespace PayStackDotNetSDK.SDK.Banks
+namespace PayStackDotNetSDK.Methods.Banks
 {
-    public class PayStackListedBanks : IBanks
+    public class ListedBanks : IBanks
     {
         private string _secretKey;
-        public PayStackListedBanks(string secretKey)
+        public ListedBanks(string secretKey)
         {
             this._secretKey = secretKey;
         }

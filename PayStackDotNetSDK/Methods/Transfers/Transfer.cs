@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace PayStackDotNetSDK.SDK.Transfers
+namespace PayStackDotNetSDK.Methods.Transfers
 {
     public class Transfer : ITransfers
     {

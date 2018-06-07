@@ -25,7 +25,9 @@ namespace PayStackDotNetSDK.Interfaces
 
         Task<TransactionResponseModel> TransactionTimeline(string reference);
 
-        Task<TransactionTotal> TransactionTotals();
+        Task<TransactionTotalModel> TransactionTotals();
+
+        Task<TransactionTotalModel> TransactionTotals(TransactionTotalsRequestModel requestModel);
 
         Task<ExportResponseModel> ExportTransactions();
 

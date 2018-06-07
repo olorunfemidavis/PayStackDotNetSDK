@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PayStackDotNetSDK.Models.Transactions
 {
-    public class TransactionTotal
+    public class TransactionTotalModel
     {
         public bool status { get; set; }
         public string message { get; set; }

@@ -11,13 +11,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace PayStackDotNetSDK.SDK.Customers
+namespace PayStackDotNetSDK.Methods.Customers
 {
-    public class PaystackCustomers : ICustomers
+    public class Customer : ICustomers
     {
 
         private string _secretKey;
-        public PaystackCustomers(string secretKey)
+        public Customer(string secretKey)
         {
             this._secretKey = secretKey;
         }

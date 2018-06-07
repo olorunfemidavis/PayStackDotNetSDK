@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace PayStackDotNetSDK.SDK.Subscription
+namespace PayStackDotNetSDK.Methods.Subscription
 {
     public class Subscription : ISubscriptions
     {
