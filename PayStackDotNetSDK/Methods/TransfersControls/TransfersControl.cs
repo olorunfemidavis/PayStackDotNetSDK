@@ -11,10 +11,10 @@ using PayStackDotNetSDK.Interfaces;
 
 namespace PayStackDotNetSDK.Methods.TransfersControls
 {
-    public class TransfersControl : ITransfersControls
+    public class PaystackTransfersControl : ITransfersControls
     {
         private string _secretKey;
-        public TransfersControl(string secretKey)
+        public PaystackTransfersControl(string secretKey)
         {
             this._secretKey = secretKey;
         }

@@ -6,10 +6,10 @@ using PayStackDotNetSDK.Models.Banks;
 
 namespace PayStackDotNetSDK.Methods.Banks
 {
-    public class ListedBanks : IBanks
+    public class PaystackListedBanks : IBanks
     {
         private string _secretKey;
-        public ListedBanks(string secretKey)
+        public PaystackListedBanks(string secretKey)
         {
             this._secretKey = secretKey;
         }

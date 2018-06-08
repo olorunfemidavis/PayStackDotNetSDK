@@ -12,10 +12,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Plans
 {
-    public class Plan : IPlans
+    public class PaystackPlan : IPlans
     {
         string _secretKey;
-        public Plan(string secretKey)
+        public PaystackPlan(string secretKey)
         {
             this._secretKey = secretKey;
         }

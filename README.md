@@ -20,6 +20,10 @@ Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetS
 
 * **Oluwasayo Babalola** -  [LinkedIn](https://www.linkedin.com/in/sayob)
 
+### Reference
+Some parts of this project were taken from Paystack.Net.SDK with full license retained. 
+* Mark Adesina -  [Github](https://github.com/developerslearnit/Paystack.Net.SDK)
+
 ## Sample Project
 This project[alpha stage] showcases some uses of PayStackDotNetSDK methods.  [Github](https://github.com/fzany/PaystackTester)
 
@@ -54,7 +58,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void InitializeTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.InitializeTransaction("email@email.com", 1000000);
             if (response.status)
             {
@@ -72,8 +76,8 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void InitializeTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
-            var response = await connectionInstance.InitializeTransaction(new TransactionRequestModel() { firstName="firstname", lastName="lastname", amount=1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email="email@email.com", metadata = new Metadata() { referrer="email@email.com" }, transaction_charge=4000 });
+            var connectionInstance = new PaystackTransaction(Credential.Key);
+            var response = await connectionInstance.InitializeTransaction(new TransactionRequestModel() { firstName="firstname", lastName="lastname", amount=1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email="email@email.com", metadata = new PaystackMetadata() { referrer="email@email.com" }, transaction_charge=4000 });
             if (response.status)
             {
                 Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -90,7 +94,7 @@ using PayStackDotNetSDK.Models.Transactions;
 #### Transaction Verification
     protected async void VerifyTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.VerifyTransaction("reference_code");
         }
 
@@ -100,7 +104,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void TransactionListing()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ListTransactions();
         }
         /// <summary>
@@ -108,7 +112,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void TransactionListing()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ListTransactions(new TransactionListRequestModel() {amount=40000, from= DateTime.UtcNow.AddDays(-10), to=DateTime.UtcNow, page=2, perPage=50, status= PayStackDotNetSDK.Helpers.Constants.Transaction.Status.Success, customer =4 });
         }
 
@@ -119,7 +123,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void FetchTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.FetchTransaction(345);
         }
 
@@ -130,7 +134,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void ChargeAuthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ChargeAuthorization("authorization_code", "email@email.com", 7000);
         }
         /// <summary>
@@ -138,7 +142,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void ChargeAuthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ChargeAuthorization(new TransactionRequestModel() { firstName="firstname" });
         }
 
@@ -146,7 +150,7 @@ using PayStackDotNetSDK.Models.Transactions;
 
      protected async void ViewTransactionTimelines()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.TransactionTimeline("referenceOrID");
         }
 
@@ -158,7 +162,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void TransactionTotals()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.TransactionTotals();
         }
         /// <summary>
@@ -166,7 +170,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void TransactionTotals()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.TransactionTotals(new TransactionTotalsRequestModel() { });
         }
  
@@ -178,7 +182,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void ExportTransactions()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ExportTransactions();
         }
         /// <summary>
@@ -186,7 +190,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void ExportTransactions()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.ExportTransactions(new ExportRequestModel() { from= DateTime.UtcNow.AddDays(-15) });
         }
 
@@ -197,7 +201,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void RequestReauthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.RequestReAuthorization("authorization_code", "email@email.com", 4000);
         }
 
@@ -206,8 +210,8 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void RequestReauthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
-            var response = await connectionInstance.RequestReAuthorization(new RequestReAuthorizationRequestModel() { amount = 4000, authorization_code = "authorization_code", currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email = "email@email.com", reference = "reference", metadata = new RequestReAuthorizationMetadata() { custom_fields = new List<RequestReAuthorizationCustomField>() { new RequestReAuthorizationCustomField() { display_name = "display_name", value = "value", variable_name = "variable_name" } } } });
+            var connectionInstance = new PaystackTransaction(Credential.Key);
+            var response = await connectionInstance.RequestReAuthorization(new RequestReAuthorizationRequestModel() { amount = 4000, authorization_code = "authorization_code", currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email = "email@email.com", reference = "reference", metadata = new PaystackRequestReAuthorizationMetadata() { custom_fields = new PaystackList<RequestReAuthorizationCustomField>() { new PaystackRequestReAuthorizationCustomField() { display_name = "display_name", value = "value", variable_name = "variable_name" } } } });
         }
  
  
@@ -218,7 +222,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void CheckAuthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.CheckAuthorization("authorization_code", "email@email.com", 4000);
         }
         /// <summary>
@@ -226,7 +230,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void CheckAuthorization()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.CheckAuthorization("authorization_code", "email@email.com", 4000, PayStackDotNetSDK.Helpers.Constants.Currency.Naira);
         }
     
@@ -317,7 +321,7 @@ using PayStackDotNetSDK.Models.Banks;
         /// </summary>
         protected async void GetAllBanks()
         {
-            var connectionInstance = new ListedBanks(Credential.Key);
+            var connectionInstance = new PaystackListedBanks(Credential.Key);
             var response = await connectionInstance.ListBanks();
         }
 

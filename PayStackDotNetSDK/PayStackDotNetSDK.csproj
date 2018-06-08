@@ -16,7 +16,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>paystack</PackageTags>
     <PackageReleaseNotes>Complete API Integration.
-Examples Published on GitHub Page</PackageReleaseNotes>
+Examples Published on GitHub Page.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

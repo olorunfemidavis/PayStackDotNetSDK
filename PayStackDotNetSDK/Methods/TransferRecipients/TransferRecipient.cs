@@ -12,10 +12,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.TransferRecipients
 {
-    public class TransferRecipient : ITransferRecipients
+    public class PaystackTransferRecipient : ITransferRecipients
     {
         string _secretKey;
-        public TransferRecipient(string secretKey)
+        public PaystackTransferRecipient(string secretKey)
         {
             this._secretKey = secretKey;
         }

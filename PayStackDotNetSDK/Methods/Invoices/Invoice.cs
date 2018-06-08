@@ -12,10 +12,10 @@ using PayStackDotNetSDK.Interfaces;
 
 namespace PayStackDotNetSDK.Methods.Invoices
 {
-    public class Invoice : IInvoices
+    public class PaystackInvoice : IInvoices
     {
         private string _secretKey;
-        public Invoice(string secretKey)
+        public PaystackInvoice(string secretKey)
         {
             this._secretKey = secretKey;
         }

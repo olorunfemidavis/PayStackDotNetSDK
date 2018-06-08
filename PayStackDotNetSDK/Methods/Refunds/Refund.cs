@@ -11,10 +11,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Refunds
 {
-    public class Refund : IRefunds
+    public class PaystackRefund : IRefunds
     {
         private string _secretKey;
-        public Refund(string secretKey)
+        public PaystackRefund(string secretKey)
         {
             this._secretKey = secretKey;
         }

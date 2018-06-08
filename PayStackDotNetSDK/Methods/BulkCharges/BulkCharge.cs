@@ -13,10 +13,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.BulkCharges
 {
-    public class BulkCharge : IBulkCharges
+    public class PaystackBulkCharge : IBulkCharges
     {
         private string _secretKey;
-        public BulkCharge(string secretKey)
+        public PaystackBulkCharge(string secretKey)
         {
             this._secretKey = secretKey;
         }

@@ -13,10 +13,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Transfers
 {
-    public class Transfer : ITransfers
+    public class PaystackTransfer : ITransfers
     {
         string _secretKey;
-        public Transfer(string secretKey)
+        public PaystackTransfer(string secretKey)
         {
             this._secretKey = secretKey;
         }

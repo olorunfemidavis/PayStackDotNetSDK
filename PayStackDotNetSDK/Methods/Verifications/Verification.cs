@@ -10,10 +10,10 @@ using PayStackDotNetSDK.Models.Verifications;
 
 namespace PayStackDotNetSDK.Methods.Verifications
 {
-    public class Verification : IVerifications
+    public class PaystackVerification : IVerifications
     {
         private string _secretKey;
-        public Verification(string secretKey)
+        public PaystackVerification(string secretKey)
         {
             this._secretKey = secretKey;
         }

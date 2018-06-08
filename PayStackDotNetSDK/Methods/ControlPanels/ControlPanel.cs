@@ -10,10 +10,10 @@ using PayStackDotNetSDK.Models.ControlPanels;
 
 namespace PayStackDotNetSDK.Methods.ControlPanels
 {
-    public class ControlPanel: IControlPanels
+    public class PaystackControlPanel : IControlPanels
     {
         private string _secretKey;
-        public ControlPanel(string secretKey)
+        public PaystackControlPanel(string secretKey)
         {
             this._secretKey = secretKey;
         }

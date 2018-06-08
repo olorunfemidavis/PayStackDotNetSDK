@@ -11,10 +11,10 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Transactions
 {
-    public class Transaction : ITransactions
+    public class PaystackTransaction : ITransactions
     {
         private string _secretKey;
-        public Transaction(string secretKey)
+        public PaystackTransaction(string secretKey)
         {
             this._secretKey = secretKey;
         }

@@ -17,14 +17,14 @@ namespace PayStackDotNetSDK.Models.Plans
     {
         public bool status { get; set; }
         public string message { get; set; }
-        public Datum data { get; set; }
+        public PlanResponseData data { get; set; }
     }
 
     public class PlanListModel
     {
         public bool status { get; set; }
         public string message { get; set; }
-        public List<Datum> data { get; set; }
+        public List<PlanResponseData> data { get; set; }
     }
 
     public class Data
@@ -44,7 +44,7 @@ namespace PayStackDotNetSDK.Models.Plans
         public DateTime updatedAt { get; set; }
     }
 
-    public class Datum
+    public class PlanResponseData
     {
         public List<object> subscriptions { get; set; }
         public int integration { get; set; }

@@ -56,7 +56,7 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void InitializeTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
+            var connectionInstance = new PaystackTransaction(Credential.Key);
             var response = await connectionInstance.InitializeTransaction("email@email.com", 1000000);
             if (response.status)
             {
@@ -74,8 +74,8 @@ using PayStackDotNetSDK.Models.Transactions;
         /// </summary>
         protected async void InitializeTransaction()
         {
-            var connectionInstance = new Transaction(Credential.Key);
-            var response = await connectionInstance.InitializeTransaction(new TransactionRequestModel() { firstName="firstname", lastName="lastname", amount=1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email="email@email.com", metadata = new Metadata() { referrer="email@email.com" }, transaction_charge=4000 });
+            var connectionInstance = new PaystackTransaction(Credential.Key);
+            var response = await connectionInstance.InitializeTransaction(new TransactionRequestModel() { firstName="firstname", lastName="lastname", amount=1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email="email@email.com", metadata = new PaystackMetadata() { referrer="email@email.com" }, transaction_charge=4000 });
             if (response.status)
             {
                 Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -174,7 +174,7 @@ using PayStackDotNetSDK.Models.Banks;
         /// </summary>
         protected async void GetAllBanks()
         {
-            var connectionInstance = new ListedBanks(Credential.Key);
+            var connectionInstance = new PaystackListedBanks(Credential.Key);
             var response = await connectionInstance.ListBanks();
         }
 

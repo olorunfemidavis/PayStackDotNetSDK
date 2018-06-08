@@ -12,10 +12,10 @@ using PayStackDotNetSDK.Interfaces;
 
 namespace PayStackDotNetSDK.Methods.Settlements
 {
-    public class Settlement : ISettlements
+    public class PaystackSettlement : ISettlements
     {
         private string _secretKey;
-        public Settlement(string secretKey)
+        public PaystackSettlement(string secretKey)
         {
             this._secretKey = secretKey;
         }

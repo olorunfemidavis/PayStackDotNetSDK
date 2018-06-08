@@ -10,11 +10,11 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Subaccounts
 {
-    public class SubAccount : ISubAccounts
+    public class PaystackSubAccount : ISubAccounts
     {
 
         private string _secretKey;
-        public SubAccount(string secretKey)
+        public PaystackSubAccount(string secretKey)
         {
             this._secretKey = secretKey;
         }

@@ -10,10 +10,10 @@ using PayStackDotNetSDK.Models.Charges;
 
 namespace PayStackDotNetSDK.Methods.Charges
 {
-    public class Charge: ICharges
+    public class PaystackCharge : ICharges
     {
         private string _secretKey;
-        public Charge(string secretKey)
+        public PaystackCharge(string secretKey)
         {
             this._secretKey = secretKey;
         }

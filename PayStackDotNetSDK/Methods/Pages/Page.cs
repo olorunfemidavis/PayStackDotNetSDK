@@ -11,10 +11,10 @@ using PayStackDotNetSDK.Interfaces;
 
 namespace PayStackDotNetSDK.Methods.Pages
 {
-    public class Page : IPages
+    public class PaystackPage : IPages
     {
         string _secretKey;
-        public Page(string secretKey)
+        public PaystackPage(string secretKey)
         {
             this._secretKey = secretKey;
         }

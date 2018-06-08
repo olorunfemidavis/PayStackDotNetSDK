@@ -12,11 +12,11 @@ using System.Web;
 
 namespace PayStackDotNetSDK.Methods.Subscription
 {
-    public class Subscription : ISubscriptions
+    public class PaystackSubscription : ISubscriptions
     {
       
         string _secretKey;
-        public Subscription(string secretKey)
+        public PaystackSubscription(string secretKey)
         {
             this._secretKey = secretKey;
         }
