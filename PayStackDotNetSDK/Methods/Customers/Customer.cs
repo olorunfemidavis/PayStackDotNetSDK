@@ -61,7 +61,7 @@ namespace PayStackDotNetSDK.Methods.Customers
         }
         public async Task<CustomerListResponse> ListCustomers(CustomersListRequestModel requestModel)
         {
-            var url = GetUrl();
+            var url = GetUrl("?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
@@ -82,7 +82,7 @@ namespace PayStackDotNetSDK.Methods.Customers
         }
         public async Task<CustomerCreationResponse> FetchCustomer(int id_or_customer_code, CustomerFetchRequestModel requestModel)
         {
-            var url = GetUrl($"{id_or_customer_code}");
+            var url = GetUrl($"{id_or_customer_code}?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());

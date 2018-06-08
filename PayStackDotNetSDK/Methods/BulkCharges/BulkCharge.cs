@@ -61,7 +61,7 @@ namespace PayStackDotNetSDK.Methods.BulkCharges
         /// <returns></returns>
         public async Task<ListBulkChargeBatchesResponseModel> ListBulkChargeBatches(GeneralListRequestModel requestModel)
         {
-            var url = GetUrl();
+            var url = GetUrl("?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
@@ -102,7 +102,7 @@ namespace PayStackDotNetSDK.Methods.BulkCharges
         /// <returns></returns>
         public async Task<FetchChargesInBatchResponseModel> FetchChargesInBatch(string id_or_code,FetchChargesInBatchRequestModel requestModel)
         {
-            var url = GetUrl($"{id_or_code}/charges");
+            var url = GetUrl($"{id_or_code}/charges?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());

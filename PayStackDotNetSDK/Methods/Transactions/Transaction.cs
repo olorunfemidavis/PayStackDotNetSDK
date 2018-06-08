@@ -74,7 +74,7 @@ namespace PayStackDotNetSDK.Methods.Transactions
         }
         public async Task<TransactionListResponseModel> ListTransactions(TransactionListRequestModel requestModel)
         {
-            var url = GetUrl();
+            var url = GetUrl("?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
@@ -135,7 +135,7 @@ namespace PayStackDotNetSDK.Methods.Transactions
         }
         public async Task<TransactionTotalModel> TransactionTotals(TransactionTotalsRequestModel requestModel)
         {
-            var url = GetUrl("totals");
+            var url = GetUrl("totals?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
@@ -152,7 +152,7 @@ namespace PayStackDotNetSDK.Methods.Transactions
         }
         public async Task<ExportResponseModel> ExportTransactions(ExportRequestModel exportRequest)
         {
-            var url = GetUrl("export");
+            var url = GetUrl("export?");
             var properties = from p in exportRequest.GetType().GetProperties()
                              where p.GetValue(exportRequest, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(exportRequest, null).ToString());

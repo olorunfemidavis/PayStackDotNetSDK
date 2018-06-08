@@ -77,7 +77,7 @@ namespace PayStackDotNetSDK.Methods.Refunds
         /// <returns></returns>
         public async Task<ListRefundResponseModel> ListRefund(ListRefundRequestModel requestModel)
         {
-            var url = GetUrl();
+            var url = GetUrl("?");
             var properties = from p in requestModel.GetType().GetProperties()
                              where p.GetValue(requestModel, null) != null
                              select p.Name + "=" + HttpUtility.UrlEncode(p.GetValue(requestModel, null).ToString());
