@@ -15,10 +15,6 @@ Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetS
 
 * **Olorunfemi Ajibulu** -  [Booksrite](https://www.booksrite.com/)
 
-## Contributors
-
-* **Oluwasayo Babalola** -  [LinkedIn](https://www.linkedin.com/in/sayob)
-
 ### Source Code
 Install this library from [Github](https://github.com/fzany/PayStackDotNetSDK)
 

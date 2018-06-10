@@ -22,7 +22,7 @@ namespace Tester.Web
             //GetAllBanks();
             //VerifyTransaction();
             //TransactionListing();
-            TransactionListing2();
+           // TransactionListing2();
         }
         /// <summary>
         /// Implements simple InitializeTransaction with basic parameters

@@ -16,16 +16,13 @@ Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetS
 
 * **Olorunfemi Ajibulu** -  [Booksrite](https://www.booksrite.com/)
 
-## Contributors
-
-* **Oluwasayo Babalola** -  [LinkedIn](https://www.linkedin.com/in/sayob)
 
 ### Reference
 Some parts of this project were taken from Paystack.Net.SDK. 
 * Mark Adesina -  [Github](https://github.com/developerslearnit/Paystack.Net.SDK)
 
 ## Sample Project
-This project[alpha stage] showcases some uses of PayStackDotNetSDK methods.  [Github](https://github.com/fzany/PaystackTester)
+This project[alpha stage] showcases some uses of PayStackDotNetSDK methods.  [Github](https://github.com/fzany/PayStackDotNetSDK/tree/master/Tester.Web)
 
 ## License
 
