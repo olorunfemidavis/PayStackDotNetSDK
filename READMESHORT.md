@@ -71,6 +71,7 @@ using PayStackDotNetSDK.Models.Transactions;
         }
         /// <summary>
         /// Implements simple InitializeTransaction with full parameters
+		/// If callback url is given, the url will be called upon completion. For example http://localhost:60441/Default.aspx?trxref=4dsnq70qtd&reference=4dsnq70qtd
         /// </summary>
         protected async void InitializeTransaction()
         {

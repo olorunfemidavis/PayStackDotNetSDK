@@ -54,6 +54,11 @@
         {
             public const string Naira = "NGN";
         }
+        public class BankType
+        {
+            public const string Nuban = "nuban";
+        }
+        
         public class CustomerActions
         {
             public const string Allow = "allow";

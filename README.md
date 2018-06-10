@@ -21,7 +21,7 @@ Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetS
 * **Oluwasayo Babalola** -  [LinkedIn](https://www.linkedin.com/in/sayob)
 
 ### Reference
-Some parts of this project were taken from Paystack.Net.SDK with full license retained. 
+Some parts of this project were taken from Paystack.Net.SDK. 
 * Mark Adesina -  [Github](https://github.com/developerslearnit/Paystack.Net.SDK)
 
 ## Sample Project
@@ -73,6 +73,7 @@ using PayStackDotNetSDK.Models.Transactions;
         }
         /// <summary>
         /// Implements simple InitializeTransaction with full parameters
+		/// If callback url is given, the url will be called upon completion. For example http://localhost:60441/Default.aspx?trxref=4dsnq70qtd&reference=4dsnq70qtd
         /// </summary>
         protected async void InitializeTransaction()
         {

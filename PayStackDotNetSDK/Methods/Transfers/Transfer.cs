@@ -56,26 +56,12 @@ namespace PayStackDotNetSDK.Methods.Transfers
         /// <summary>
         /// POST Initiate Transfer
         /// </summary>
-        /// <param name="amount"></param>
-        /// <param name="recipient_code"></param>
-        /// <param name="source"></param>
-        /// <param name="currency"></param>
-        /// <param name="reason"></param>
-        /// <param name="reference"></param>
+        /// <param name="requestModel"></param>
         /// <returns></returns>
-        public async Task<TransferInitiationResponseModel> InitiateTransfer(int amount, string recipient_code, string source = "balance", string currency = "NGN", string reason = null, string reference = null)
+        public async Task<TransferInitiationResponseModel> InitiateTransfer(TransferInitiationRequestModel requestModel)
         {
             string url = GetUrl();
-            var values = new Dictionary<string, string>
-        {
-           { "recipient", recipient_code },
-           { "amount", $"{amount}" },
-            { "source", source },
-            { "currency", $"{currency}" },
-            { "reason", reason },
-            { "reference", reference.ToLower() }
-        };
-            var content = await BaseClient.PostEntities(url, GetContent(values), this._secretKey);
+            var content = await BaseClient.PostEntities(url, JsonConvert.SerializeObject(requestModel), this._secretKey);
             return JsonConvert.DeserializeObject<TransferInitiationResponseModel>(content);
         }
         /// <summary>

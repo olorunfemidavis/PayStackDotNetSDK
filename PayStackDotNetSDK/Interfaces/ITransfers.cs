@@ -9,7 +9,8 @@ namespace PayStackDotNetSDK.Interfaces
     {
 
         Task<TransferInitiationResponseModel> InitiateTransfer(int amount, string recipient_code, string source = "balance");
-        Task<TransferInitiationResponseModel> InitiateTransfer(int amount, string recipient_code, string source = "balance", string currency = "NGN", string reason = null, string reference = null);
+
+        Task<TransferInitiationResponseModel> InitiateTransfer(TransferInitiationRequestModel requestModel);
 
         Task<TransferListResponseModel> ListTransfers();
 
