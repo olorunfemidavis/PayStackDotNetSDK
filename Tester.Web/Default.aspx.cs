@@ -30,7 +30,7 @@ namespace Tester.Web
         protected async void InitializeTransaction()
         {
             var paystackTransactionAPI = new PaystackTransaction(Credential.Key);
-            var response = await paystackTransactionAPI.InitializeTransaction("fzanyajibs@gmail.com", 1000000);
+            var response = await paystackTransactionAPI.InitializeTransaction("email@email.com", 1000000);
             if (response.status)
             {
                 Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -49,7 +49,7 @@ namespace Tester.Web
         protected async void InitializeTransaction2()
         {
             var paystackTransactionAPI = new PaystackTransaction(Credential.Key);
-            var response = await paystackTransactionAPI.InitializeTransaction(new TransactionRequestModel() { firstName = "Olorunfemi", callback_url= "http://localhost:60441/Default.aspx", lastName = "Ajibulu", amount = 1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email = "fzanyajibs@gmail.com", metadata = new PayStackDotNetSDK.Models.Transactions.Metadata() { referrer = "sayob02@gmail.com" }, transaction_charge = 4000 });
+            var response = await paystackTransactionAPI.InitializeTransaction(new TransactionRequestModel() { firstName = "Olorunfemi", callback_url= "http://localhost:60441/Default.aspx", lastName = "Ajibulu", amount = 1000000, currency = PayStackDotNetSDK.Helpers.Constants.Currency.Naira, email = "email@email.com", metadata = new PayStackDotNetSDK.Models.Transactions.Metadata() { referrer = "email@email.com" }, transaction_charge = 4000 });
             if (response.status)
             {
                 Response.AddHeader("Access-Control-Allow-Origin", "*");
@@ -65,7 +65,7 @@ namespace Tester.Web
         protected async void VerifyTransaction()
         {
             var paystackTransactionAPI = new PaystackTransaction(Credential.Key);
-            var response = await paystackTransactionAPI.VerifyTransaction("stwmg8j8bb");
+            var response = await paystackTransactionAPI.VerifyTransaction("stwmg8j8by");
             var json = new JavaScriptSerializer().Serialize(response);
             contentDiv.InnerText = json;
         }
