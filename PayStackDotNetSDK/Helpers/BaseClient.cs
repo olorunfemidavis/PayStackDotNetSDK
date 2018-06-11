@@ -15,8 +15,8 @@ namespace PayStackDotNetSDK.Helpers
         internal static async Task<string> GetEntities(string urlLink, string secretKey)
         {
             var client = HttpConnection.CreateClient(secretKey);
-            var response = await client.GetAsync(urlLink);
-            return await response.Content.ReadAsStringAsync();
+            var response = client.GetAsync(urlLink);
+            return await response.Result.Content.ReadAsStringAsync();
         }
         internal static async Task<string> PutEntities(string urlLink, string content, string secretKey)
         {
