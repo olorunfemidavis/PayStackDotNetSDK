@@ -20,7 +20,7 @@ namespace Tester.Web
         {
             //InitializeTransaction2();
             //GetAllBanks();
-            //VerifyTransaction();
+            VerifyTransaction();
             //TransactionListing();
            // TransactionListing2();
         }
@@ -64,8 +64,8 @@ namespace Tester.Web
 
         protected async void VerifyTransaction()
         {
-            var paystackTransactionAPI = new PaystackTransaction(Credential.Key);
-            var response = await paystackTransactionAPI.VerifyTransaction("stwmg8j8by");
+            var paystackTransactionAPI = new PaystackTransaction("apikey/secret/key");
+            var response = await paystackTransactionAPI.VerifyTransaction("T262788937392358");
             var json = new JavaScriptSerializer().Serialize(response);
             contentDiv.InnerText = json;
         }
