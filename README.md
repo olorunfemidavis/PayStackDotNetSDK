@@ -14,7 +14,7 @@ Install this library from [Nuget](https://www.nuget.org/packages/PayStackDotNetS
 
 ## Author
 
-* **Olorunfemi Ajibulu** -  [Booksrite](https://www.booksrite.com/)
+* **Olorunfemi Davis** -  [Booksrite](https://www.booksrite.com/)
 
 
 ### Reference
