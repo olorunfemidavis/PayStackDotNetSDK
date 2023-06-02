@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PayStackDotNetSDK.Models
+﻿namespace PayStackDotNetSDK.Models
 {
     public class GeneralResponseModel
     {

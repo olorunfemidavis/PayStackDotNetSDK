@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PayStackDotNetSDK.Models.BulkCharges
+﻿namespace PayStackDotNetSDK.Models.BulkCharges
 {
     public class FetchChargesInBatchRequestModel
     {

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 using PayStackDotNetSDK.Interfaces;
 using Newtonsoft.Json;
