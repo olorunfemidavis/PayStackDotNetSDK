@@ -1,39 +1,49 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Olorunfemi Ajibulu</Authors>
-    <Description>The Paystack .Net API Collection is a collection of all endpoints that C# developers can take advantage of to build financial solutions in Nigeria</Description>
-    <Copyright>MIT License</Copyright>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.4.4</Version>
-    <Company>Booksrite.com</Company>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/fzany/PayStackDotNetSDK/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/fzany/PayStackDotNetSDK</PackageProjectUrl>
-    <PackageIconUrl>https://res.cloudinary.com/booksrite/image/upload/v1528391286/favicon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/fzany/PayStackDotNetSDK</RepositoryUrl>
-    <RepositoryType>Git</RepositoryType>
-    <PackageTags>paystack</PackageTags>
-    <PackageReleaseNotes>Complete API Integration.
-Examples Published on GitHub Page.
-GET fix</PackageReleaseNotes>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Authors>Olorunfemi Davis</Authors>
+		<Description>The Paystack .Net API Collection is a collection of all endpoints that C# developers can take advantage of to build financial solutions in Nigeria</Description>
+		<Copyright>MIT License</Copyright>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Version>1.4.4-rc</Version>
+		<Company>huygensoft.com</Company>
+		<PackageProjectUrl>https://github.com/fzany/PayStackDotNetSDK</PackageProjectUrl>
+		<PackageIconUrl>https://res.cloudinary.com/booksrite/image/upload/v1528391286/favicon.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/fzany/PayStackDotNetSDK</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageTags>paystack</PackageTags>
+		<PackageReleaseNotes>
+			Patch and compactibility with .net 6
+		</PackageReleaseNotes>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>favicon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
 
 
-  <ItemGroup>
-    <None Include="Models\Paystack.Net.Models.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\..\..\..\Downloads\favicon.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="Models\Paystack.Net.Models.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+	</ItemGroup>
 
 </Project>
